@@ -77,6 +77,6 @@ function calcularPrecio() {
     <p><img src="${imagenPizza}" alt="Pizza de ${tipo}" style="width: 200px; height: auto; border-radius: 8px;"></p>  <!-- Imagen de la pizza -->
     <p><strong>Tamaño:</strong> ${tamano}</p>
     <p><strong>Extras:</strong> ${extras.salami ? 'Salami' : ''} ${extras.tocino ? 'Tocino' : ''} ${extras.queso ? 'Queso Extra' : ''} ${extras.cebolla ? 'Cebolla' : ''}</p>
-    <p><strong>Total: Q${total.toFixed(2)}</strong></p>
+    <p><strong>Total: $Q{total.toFixed(2)}</strong></p>
   `;
 }
