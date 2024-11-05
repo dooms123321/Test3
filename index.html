@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzería Interactiva</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pizzería Interactiva</h1>
+        
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Ingresa tu nombre" />
+        </div>
+
+        <div class="form-group">
+            <label for="tipo">Tipo de Pizza:</label>
+            <select id="tipo">
+                <option value="queso">De Queso</option>
+                <option value="carne">Cinco Carnes</option>
+                <option value="jamon">De Jamón</option>
+                <option value="peperoni">De Peperoni</option>
+                <option value="hawaina">Hawaiana</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="tamano">Tamaño:</label>
+            <input type="radio" name="tamano" value="Pequeña" id="pequena"> Pequeña
+            <input type="radio" name="tamano" value="Mediana" id="mediana" checked> Mediana
+            <input type="radio" name="tamano" value="Grande" id="grande"> Grande
+        </div>
+
+        <div class="form-group">
+            <label>Extras:</label>
+            <input type="checkbox" id="salami"> Salami
+            <input type="checkbox" id="tocino"> Tocino
+            <input type="checkbox" id="queso"> Queso Extra
+            <input type="checkbox" id="cebolla"> Cebolla
+        </div>
+
+        <button onclick="calcularPrecio()">Calcular Precio</button>
+
+        <h2>Factura:</h2>
+        <div id="factura"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
