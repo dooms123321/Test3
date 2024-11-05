@@ -1,5 +1,5 @@
 function calcularPrecio() {
-  // Obtener los valores de los campos
+  // valores
   const nombre = document.getElementById('nombre').value;
   const tipo = document.getElementById('tipo').value;
   const tamano = document.querySelector('input[name="tamano"]:checked').value;
@@ -14,37 +14,37 @@ function calcularPrecio() {
   let precioBase = 0;
   let precioTamaño = 0;
   let precioExtras = 0;
-  let imagenPizza = '';  // Variable para la imagen
+  let imagenPizza = '';  
 
-  // Calcular el precio base según el tipo de pizza y asignar la imagen
+  // Calcular el precio por ingrediente 
   switch (tipo) {
     case 'queso':
       precioBase = 30;
-      imagenPizza = 'imagen/queso.jpg'; // Ruta de la imagen
+      imagenPizza = 'imagen/queso.jpg'; 
       break;
     case 'carne':
       precioBase = 50;
-      imagenPizza = 'imagen/cinco.jpg'; // Ruta de la imagen
+      imagenPizza = 'imagen/cinco.jpg'; 
       break;
     case 'jamon':
       precioBase = 40;
-      imagenPizza = 'imagen/jamon.jpg'; // Ruta de la imagen
+      imagenPizza = 'imagen/jamon.jpg'; 
       break;
     case 'peperoni':
       precioBase = 45;
-      imagenPizza = 'imagen/peperoni.jpg'; // Ruta de la imagen
+      imagenPizza = 'imagen/peperoni.jpg'; 
       break;
     case 'hawaina':
       precioBase = 35;
-      imagenPizza = 'imagen/piña.jpg'; // Ruta de la imagen
+      imagenPizza = 'imagen/piña.jpg'; 
       break;
     default:
       precioBase = 30;
-      imagenPizza = 'imagen/queso.jpg'; // Ruta de la imagen por defecto
+      imagenPizza = 'imagen/queso.jpg'; 
       break;
   }
 
-  // Calcular el precio según el tamaño de la pizza
+  // Calcular el precio por tamaño
   switch (tamano) {
     case 'Pequeña':
       precioTamaño = 0;
@@ -69,7 +69,7 @@ function calcularPrecio() {
   // Calcular el precio total
   const total = precioBase + precioTamaño + precioExtras;
 
-  // Mostrar la factura con la imagen de la pizza
+  // Mostrar la factura 
   const factura = document.getElementById('factura');
   factura.innerHTML = `
     <p><strong>Cliente:</strong> ${nombre}</p>
